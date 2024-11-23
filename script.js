@@ -15,7 +15,10 @@ document.getElementById('generateFact').addEventListener('click', function() {
     const randomIndex = Math.floor(Math.random() * facts.length);
     const randomFact = facts[randomIndex];
 
-    document.getElementById('factDisplay').textContent = randomFact;
+    const factDisplay = document.getElementById('factDisplay');
+    factDisplay.textContent = randomFact;
+    factDisplay.classList.remove('hidden');
+    factDisplay.classList.add('visible');
 });
 
 document.getElementById('copyFact').addEventListener('click', function() {
